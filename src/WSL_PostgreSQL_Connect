@@ -1,0 +1,43 @@
+//default user is postgres, password = password
+
+//start psql
+sudo service postgresql start
+sudo -u postgres psql
+
+//other commands
+sudo service postgresql status
+sudo service postgresql stop
+\l = list data bases
+create database NAME;
+\du = list users
+grant all privileges on database "DATABASE_NAME" to USER;
+\c DATABASE_NAME = connect to database
+\d = show relations
+select * from DATABASE_NAME = show tables
+
+
+//in powershell:
+npx kill-port 8090 = kill process on port 8090
+
+
+http://localhost:8090/api/v1/student
+
+
+{
+	"name": "Bilal",
+	"email": "bilal@gmail.com",
+	"dob": "1995-12-17"
+}
+
+{
+	"name": "Mike",
+	"email": "mike@gmail.com",
+	"dob": "1999-05-02"
+}
+
+http://localhost:8090/api/v1/student/1?name=Encule
+
+http://localhost:8090/api/v1/student/1?email=encule.com
+
+
+java -jar APPNAME --server.port=PORT
